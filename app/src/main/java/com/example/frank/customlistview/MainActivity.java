@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.CheckedTextView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -37,10 +38,7 @@ public class MainActivity extends AppCompatActivity {
         stockPropertyList[0].add(new StockProperty("Revenue","1,042"));
 
         listView = (ListView) findViewById(R.id.customListView);
-
-//        CustomBaseAdapter customBaseAdapter = new CustomBaseAdapter(getApplicationContext(),fruitList,fruitImages);
         CustomBaseAdapter customBaseAdapter = new CustomBaseAdapter(getApplicationContext(),(ArrayList<StockProperty>)stockPropertyList[0],fruitImages);
-
         listView.setAdapter(customBaseAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

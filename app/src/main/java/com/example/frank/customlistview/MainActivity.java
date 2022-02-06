@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < MAX_SYMBOLS; i++) {
                 stockPropertyList[i] = new ArrayList<>();
             }
+            stockPropertyList[0].add(new StockProperty("rv","alot"));
+            stockPropertyList[0].add(new StockProperty("xxrv","asdfalot"));
+            stockPropertyList[0].add(new StockProperty("Revenue","1,042"));
         }
-        stockPropertyList[0].add(new StockProperty("rv","alot"));
-        stockPropertyList[0].add(new StockProperty("xxrv","asdfalot"));
-        stockPropertyList[0].add(new StockProperty("Revenue","1,042"));
 
         listView = (ListView) findViewById(R.id.customListView);
         CustomBaseAdapter customBaseAdapter = new CustomBaseAdapter(getApplicationContext(),(ArrayList<StockProperty>)stockPropertyList[0],fruitImages);

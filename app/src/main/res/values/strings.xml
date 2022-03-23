@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CustomListView</string>
+    <string name="create_a_profile">Create a Profile</string>
+    <string name="select_a_profile">Select a Profile</string>
+    <string name="buttonAdd">Add</string>
+    <string name="buttonRemove">Remove</string>
 </resources>

@@ -43,12 +43,22 @@ public class CustomBaseAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = inflater.inflate(R.layout.activity_custom_list_view,null);
-        CheckBox checkbox =
-                (CheckBox) convertView.findViewById( R.id.checkBox);
+
+        ImageView image = (ImageView) convertView.findViewById(R.id.imageIcon);
+        image.setOnClickListener(
+                new View.OnClickListener()
+        {
+            public void onClick(View v){
+                Toast.makeText( context,"image clicked",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        CheckBox checkbox = (CheckBox) convertView.findViewById( R.id.checkBox);
         checkbox.setOnClickListener(
                 new View.OnClickListener() {
-                    public void onClick(View v) {
-                        Toast.makeText( context,"ImageButton clicked",Toast.LENGTH_SHORT).show();
+                    public void onClick(View v)
+                    {
+                        Toast.makeText( context,"checkbox clicked",Toast.LENGTH_SHORT).show();
                         if (checkbox.isChecked()) {
                             Log.i("CUSTOM_LIST_VIEW","Checkbox:Item is selected @ Position :: " + position);
                         }
